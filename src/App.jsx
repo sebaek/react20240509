@@ -15,6 +15,9 @@ function App() {
 
   return (
     <>
+      <p>
+        {val1} 선수는 연봉이 {val3}억원이다.
+      </p>
       <div>{val1}</div>
       <div>{val2}</div>
       <div>{val3}</div>
