@@ -3,7 +3,14 @@ function App() {
   const position = "미드필더";
   const salary = 30;
 
-  return <div>{/* <p> 미드필더 강인의 연봉은 30억입니다. </p> */}</div>;
+  return (
+    <div>
+      {/* <p> 미드필더 강인의 연봉은 30억입니다. </p> */}
+      <p>
+        {position} {name}의 연봉은 {salary}억입니다.
+      </p>
+    </div>
+  );
 }
 
 export default App;
