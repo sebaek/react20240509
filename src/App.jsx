@@ -16,7 +16,7 @@ function App(props) {
   b.name = "Jane";
   console.log(a === b); // true
 
-  console.log("a.name", a.name); // John
+  console.log("a.name", a.name); // Jane
   console.log("b.name", b.name); // Jane
 
   return <div></div>;
