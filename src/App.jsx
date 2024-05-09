@@ -11,6 +11,22 @@ function App(props) {
   console.log("b", b);
   console.log("c", c);
 
+  console.log("b의 name", b.name);
+  console.log("c의 address", c.address);
+
+  console.log("b의 name", b["name"]);
+  console.log("c의 address", c["address"]);
+
+  b.name = "강인";
+  console.log("b의 name", b.name);
+
+  // 없는 프로퍼티에도 접근 가능
+  console.log("b의 city", b.city); // undefined
+  b.city = "부산"; // city 프로퍼티 추가됨
+  b.address = "강남"; // address 프로퍼티 추가됨
+
+  console.log("b", b);
+
   return <div></div>;
 }
 
