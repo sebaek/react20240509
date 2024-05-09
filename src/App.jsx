@@ -2,6 +2,13 @@ import React from "react";
 
 function App(props) {
   // todo : son 객체 만들기
+  const son = {
+    firstName: "John",
+    lastName: "Doe",
+    address: "127.0.0.1",
+    country: "US",
+    married: false,
+  };
   return (
     <div>
       <ul>
