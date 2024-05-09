@@ -13,6 +13,11 @@ function App(props) {
       <li> coffee </li>
     </ul>
   */}
+      <ul>
+        {foodList.map((food) => (
+          <li> {food} </li>
+        ))}
+      </ul>
     </div>
   );
 }
