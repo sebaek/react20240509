@@ -2,6 +2,10 @@ import React from "react";
 
 // todo : MyButton 컴포넌트 만들기
 
+function MyButton({ name = "클릭" }) {
+  return <button>{name}</button>;
+}
+
 function App(props) {
   return (
     <div>
