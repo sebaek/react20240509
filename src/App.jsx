@@ -30,7 +30,9 @@ function App(props) {
   const d = ["pizza", "son", 77];
   // 코드 작성
   // 1. 참조값 복사 , 객체 e
+  const e = d;
   // 2. 각 원소를 복사해서 새 배열 만들기, 객체 f
+  const [...f] = d;
 
   e[2] = 88;
 
