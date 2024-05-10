@@ -9,6 +9,7 @@ function App(props) {
   };
 
   // todo: 이 위치에 적절한 코드 작성
+  const { email, name, address, country } = person;
 
   console.log("email", email); // test@example.com
   console.log("name", name); // test
