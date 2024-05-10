@@ -26,6 +26,7 @@ function App(props) {
     category: "food",
   };
   // 작성!
+  const { price, ...d } = c;
 
   console.log("price", price); // 500
   console.log("d.city", d.city); // "seoul"
