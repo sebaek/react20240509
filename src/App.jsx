@@ -40,6 +40,9 @@ function App(props) {
   };
 
   // 코드 작성 : d 객체를 e 객체로 깊은 복사
+  const { ...e } = d;
+  const { ...company } = d.company;
+  e.company = company;
 
   e.name = "galaxy";
   e.company.name = "samsung";
