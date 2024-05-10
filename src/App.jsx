@@ -29,6 +29,26 @@ function App(props) {
   console.log("a.address.city", a.address.city); // busan
   console.log("c.address.city", c.address.city); // london
 
+  // 연습; 깊은 복사
+  const d = {
+    company: {
+      name: "apple",
+      location: "us",
+    },
+    name: "iphone",
+    price: 300,
+  };
+
+  // 코드 작성 : d 객체를 e 객체로 깊은 복사
+
+  e.name = "galaxy";
+  e.company.name = "samsung";
+
+  console.log("d.name", d.name); // iphone
+  console.log("d.company.name", d.company.name); // apple
+  console.log("e.name", e.name); // galaxy
+  console.log("e.company.name", e.company.name); // samsung
+
   return <div></div>;
 }
 
