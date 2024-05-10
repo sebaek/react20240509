@@ -26,6 +26,18 @@ function App(props) {
   console.log("b[0]", b[0]); // 6
   console.log("c[0]", c[0]); // 66
 
+  // 연습 : 객체 복사
+  const d = ["pizza", "son", 77];
+  // 코드 작성
+  // 1. 참조값 복사 , 객체 e
+  // 2. 각 원소를 복사해서 새 배열 만들기, 객체 f
+
+  e[2] = 88;
+
+  console.log("d", d); // ["pizza", "son", 88]
+  console.log("e", e); // ["pizza", "son", 88]
+  console.log("f", f); // ["pizza", "son", 77]
+
   return <div></div>;
 }
 
