@@ -42,6 +42,7 @@ function App(props) {
   // 연습
   const d = ["name", "email", "phone"];
   // 분해할당 코드 작성
+  const [d1, d2, d3, d4 = "city"] = d;
 
   console.log("d1", d1); // name
   console.log("d2", d2); // email
