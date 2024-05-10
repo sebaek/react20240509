@@ -37,6 +37,7 @@ function App(props) {
     city: "seoul",
   };
   // 코드 작성!
+  const { ...f } = e;
 
   e.city = "busan";
   // {
