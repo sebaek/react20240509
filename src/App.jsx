@@ -5,7 +5,7 @@ function MyComp() {
   console.log("다시 그려짐");
   return (
     <div>
-      <button onClick={() => setVal(0)}>클릭 {val}</button>
+      <button onClick={() => setVal(1)}>클릭 {val}</button>
     </div>
   );
 }
