@@ -1,2 +1,2 @@
-const v1 = "korea";
-const v2 = "seoul";
+export const v1 = "korea";
+export const v2 = "seoul";

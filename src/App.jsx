@@ -1,4 +1,6 @@
 import React from "react";
+import { v1, v2 } from "./Values2.jsx";
+import { c1, v2 as c2 } from "./Values1.jsx";
 
 // todo : import 코드 작성
 //  Value1.jsx, Value2.jsx는 export 코드 작성
