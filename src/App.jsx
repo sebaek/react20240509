@@ -1,18 +1,28 @@
-import React, { useState } from "react";
+import React, { createContext, useContext, useState } from "react";
+// step1 : 컨텍스트 만들기
+const MessageContext = createContext(null);
 
-function MyInput({ onChange, text }) {
+function MyInput() {
+  // step2 : 컨텍스트 사용하기
+  const message = useContext(MessageContext);
   return (
     <div>
-      <input type="text" onChange={(e) => onChange(e.target.value)} />
-      <p>{text}</p>
+      <input
+        type="text"
+        value={message.text}
+        onChange={(e) => message.updateText(e.target.value)}
+      />
+      <p>{message.text}</p>
     </div>
   );
 }
 
-function MyText({ text }) {
+function MyText() {
+  // step2 : 컨텍스트 사용하기
+  const text = useContext(MessageContext);
   return (
     <div>
-      <p>{text}</p>
+      <p>{text.text}</p>
     </div>
   );
 }
@@ -26,8 +36,11 @@ function App(props) {
 
   return (
     <div>
-      <MyInput text={text} onChange={handleUpdateText} />
-      <MyText text={text} />
+      {/* step3 : 컨텍스트 제공 */}
+      <MessageContext.Provider value={{ text, updateText: handleUpdateText }}>
+        <MyInput />
+        <MyText />
+      </MessageContext.Provider>
     </div>
   );
 }
