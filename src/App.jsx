@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-function MyBox({ message }) {
+// step1 : 콘텍스트 만들기
+const MessageContext = createContext(null);
+
+function MyBox() {
+  // step2 : 콘텍스트 사용하기
+  const message = useContext(MessageContext);
   return <div>{message}</div>;
 }
 
-function MySection({ message }) {
-  return <MyBox message={message} />;
+function MySection() {
+  return <MyBox />;
 }
 
-function MyContainer({ message }) {
-  return <MySection message={message} />;
+function MyContainer() {
+  return <MySection />;
 }
 
 // context
@@ -22,7 +27,10 @@ function App(props) {
       <input type="text" onChange={(e) => setMessage(e.target.value)} />
       <p>{message}</p>
       <hr />
-      <MyContainer message={message} />
+      {/* step3 : 컨텍스트 제공하기 */}
+      <MessageContext.Provider value={message}>
+        <MyContainer />
+      </MessageContext.Provider>
     </div>
   );
 }
