@@ -21,6 +21,14 @@ function MyComp() {
     console.log("첫 렌더링 때만 실행되는 메소드");
   }, []);
 
+  // 첫번째 파라미터(함수)의 리턴은
+  // unmount 될 때 실행
+  useEffect(() => {
+    return () => {
+      console.log("언마운트 될 때 실행 되는 메소드");
+    };
+  }, []);
+
   const [count, setCount] = useState(0);
 
   return (
