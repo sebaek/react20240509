@@ -13,13 +13,26 @@ function App(props) {
       .catch(() => console.log("catch의 메소드, 400응답시"));
   }
 
+  function handleClick404() {
+    axios
+      .get("/api/main43/sub5")
+      .then(() => {})
+      .catch(() => console.log("200번 응답 아님!!!!"));
+  }
+  function handleClick500() {
+    axios
+      .get("/api/main43/sub6")
+      .then(() => {})
+      .catch(() => console.log("200번 응답 아님####"));
+  }
+
   return (
     <div>
       <button onClick={handleClick200}>200 응답</button>
       <button onClick={handleClick400}>400 응답</button>
       {/* 아래 응답받은 후 콘솔에 메세지 출력  */}
-      <button>404 응답</button>
-      <button>500 응답</button>
+      <button onClick={handleClick404}>404 응답</button>
+      <button onClick={handleClick500}>500 응답</button>
     </div>
   );
 }
