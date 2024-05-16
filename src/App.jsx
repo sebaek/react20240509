@@ -63,6 +63,10 @@ function App(props) {
             console.log("403 응답 입니다. 권한이 없습니다.");
             break;
         }
+      })
+      .finally(() => {
+        // finally : 응답 코드가 200이든 아니든 항상 실행됨
+        console.log("항상 실행되는 메소드");
       });
   }
 
