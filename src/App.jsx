@@ -42,6 +42,9 @@ function App(props) {
       <button onClick={handle200}>200응답</button>
       <button onClick={handle400}>400응답</button>
       <button onClick={handle500}>500응답</button>
+
+      {/* 200, 401, 403 응답일 때 각각 다른 일하는 코드 작성 */}
+      <button>응답 코드에 따라 다른 일하기</button>
     </div>
   );
 }
