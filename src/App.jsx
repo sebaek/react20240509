@@ -37,6 +37,35 @@ function App(props) {
       });
   }
 
+  function handle999() {
+    const r = Math.random();
+    let path = "";
+    if (r < 1 / 3) {
+      path = "/api/main43/sub1";
+    } else if (r < 2 / 3) {
+      path = "/api/main43/sub3";
+    } else {
+      path = "/api/main43/sub4";
+    }
+    axios
+      .get(path)
+      .then(() => {
+        console.log("잘 됨 ");
+      })
+      .catch((error) => {
+        const code = error.response.status;
+
+        switch (code) {
+          case 401:
+            console.log("401 응답 입니다. 로그인되지 않았습니다.");
+            break;
+          case 403:
+            console.log("403 응답 입니다. 권한이 없습니다.");
+            break;
+        }
+      });
+  }
+
   return (
     <div>
       <button onClick={handle200}>200응답</button>
@@ -44,7 +73,7 @@ function App(props) {
       <button onClick={handle500}>500응답</button>
 
       {/* 200, 401, 403 응답일 때 각각 다른 일하는 코드 작성 */}
-      <button>응답 코드에 따라 다른 일하기</button>
+      <button onClick={handle999}>응답 코드에 따라 다른 일하기</button>
     </div>
   );
 }
