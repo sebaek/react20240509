@@ -4,6 +4,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // /about
 // /search
 // /home
+// /spring/framework
+// /spring/doc
+// /spring/learn
+
 // 위 경로에 다른 컴포넌트가 출력되도록 작성
 const route = createBrowserRouter([
   { path: "about", element: <div>about page</div> },
