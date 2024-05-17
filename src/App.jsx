@@ -4,6 +4,7 @@ import {
   Link,
   Outlet,
   RouterProvider,
+  useParams,
 } from "react-router-dom";
 
 function Root() {
@@ -24,11 +25,27 @@ function Root() {
 function BoardList() {
   return (
     <div>
-      <div>1번 게시물 보기</div>
-      <div>2번 게시물 보기</div>
-      <div>3번 게시물 보기</div>
+      <div>
+        <Link to="/board/1">1번 게시물 보기</Link>
+      </div>
+      <div>
+        <Link to="/board/2">2번 게시물 보기</Link>
+      </div>
+      <div>
+        <Link to="/board/3">3번 게시물 보기</Link>
+      </div>
     </div>
   );
+}
+
+function BoardView() {
+  // /board/:id
+  // /board/1
+  // /board/2
+  // dynamic segment 읽기
+  const params = useParams();
+
+  return <div>{params.id}번 게시물 보기</div>;
 }
 
 const router = createBrowserRouter([
@@ -41,8 +58,8 @@ const router = createBrowserRouter([
         element: <div>MAIN PAGE</div>,
       },
       {
-        path: "board",
-        element: <div>BOARD PAGE</div>,
+        path: "board/:id",
+        element: <BoardView />,
       },
       {
         path: "list",
