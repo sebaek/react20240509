@@ -19,12 +19,17 @@ const router = createBrowserRouter([
     element: <BoardList />,
   },
   {
-    path: "/board/write",
-    element: <div>게시물 작성하기!!</div>,
-  },
-  {
-    path: "/board/edit",
-    element: <div>게시물 수정하기@@</div>,
+    path: "/board",
+    children: [
+      {
+        path: "write",
+        element: <div>게시물 작성하기!!</div>,
+      },
+      {
+        path: "edit",
+        element: <div>게시물 수정하기@@</div>,
+      },
+    ],
   },
 ]);
 
