@@ -13,6 +13,14 @@ const route = createBrowserRouter([
   { path: "about", element: <div>about page</div> },
   { path: "search", element: <div>search page</div> },
   { path: "home", element: <div>home page</div> },
+  {
+    path: "spring",
+    children: [
+      { path: "framework", element: <div>spring framework</div> },
+      { path: "doc", element: <div>spring doc</div> },
+      { path: "learn", element: <div>spring learn</div> },
+    ],
+  },
 ]);
 
 function App(props) {
